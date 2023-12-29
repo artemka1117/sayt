@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            color: #ffffff;
+            margin: 0;
+            background-image: url('tema.jpg');
+        }
+
+        nav {
+            background: linear-gradient(to left, rgb(177, 12, 228), #03449f);
+            padding: 0.5em;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        li {
+            float: left;
+            margin-right: 20px;
+        }
+
+        a {
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #catalog {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        article {
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 5px;
+            margin: 10px;
+            padding: 15px;
+            width: 300px;
+        }
+
+        footer {
+            background-color: #e1e1e1;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .car-description {
+            display: none;
+            white-space: pre-line;
+        }
+
+
+        .show-description {
+            cursor: pointer;
+            background: linear-gradient(to left, #aa02f1, #1f77f3);
+        }
+    </style>
+    <title>Каталог запчастей</title>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="#" onclick="openTab('processors')">Процессоры</a></li>
+            <li><a href="#" onclick="openTab('videoCards')">Видеокарты</a></li>
+            <li><a href="#" onclick="openTab('memory')">Оперативная память</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="processors" class="tabcontent">
+    <div id="catalog">
+        <article>
+            <img src="processor.png" width="310" height="300" alt="Процессор">
+            <h2>Процессор Intel Core i7-13700</h2>
+            <p>Цена: 217 990 тг</p>
+            <p class="car-description">
+            Тип процессора: Core i7
+            Сокет: LGA1700
+            Базовая частота процессора: 2100.0 МГц
+            Максимальная частота процессора: 5200.0 МГц
+            Тип поставки: OEM
+            Количество ядер: 16</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article> 
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+
+        <article>
+            <img src="processor1.png" width="310" height="300" alt="Процессор">
+            <h2>Процессор Intel Core i9-13900KF</h2>
+            <p>Цена: 328 990 тг</p>
+            <p class="car-description">
+                Тип процессора: Core i9
+                Сокет: LGA1700
+                Базовая частота процессора: 3000.0 МГц
+                Максимальная частота процессора: 5800.0 МГц
+                Тип поставки: OEM
+                Количество ядер: 24</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+
+        <article>
+            <img src="processor2.png" width="310" height="300" alt="Процессор">
+            <h2>Процессор Intel Core i5-14600K</h2>
+            <p>Цена: 182 990 тг</p>
+            <p class="car-description">
+                Тип процессора: Core i5
+                Сокет: LGA1700
+                Базовая частота процессора: 3500.0 МГц
+                Максимальная частота процессора: 5300.0 МГц
+                Тип поставки: OEM
+                Количество ядер: 14</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="processor3.png" width="310" height="300" alt="Процессор">
+            <h2>Процессор AMD Ryzen 5 7600X</h2>
+            <p>Цена: 129 990 тг</p>
+            <p class="car-description">
+                Тип процессора: Ryzen 5
+                Сокет: AM5
+                Базовая частота процессора: 4700.0 МГц
+                Максимальная частота процессора: 5300.0 МГц
+                Тип поставки: BOX
+                Количество ядер: 6</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+
+        <article>
+            <img src="processor4.png" width="310" height="300" alt="Процессор">
+            <h2>Процессор AMD Ryzen 7 3800X</h2>
+            <p>Цена: 135 990 тг</p>
+            <p class="car-description">
+                Тип процессора: Ryzen 7
+                Сокет: AM4
+                Базовая частота процессора: 3900.0 МГц
+                Максимальная частота процессора: 4500.0 МГц
+                Тип поставки: BOX
+                Количество ядер: 8</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+
+        <article>
+            <img src="processor5.png" width="310" height="300" alt="Процессор">
+            <h2>Процессор Intel Core i5 9600KF</h2>
+            <p>Цена: 110 990 тг</p>
+            <p class="car-description">
+                Тип процессора: Core i5
+                Сокет: LGA1151 v2
+                Базовая частота процессора: 3700.0 МГц
+                Максимальная частота процессора: 4600.0 МГц
+                Тип поставки: OEM
+                Количество ядер: 6</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+
+        <article>
+            <img src="processor6.png" width="310" height="300" alt="Процессор">
+            <h2>Процессор Intel Core i3-13100F</h2>
+            <p>Цена: 71 061 тг</p>
+            <p class="car-description">
+                Тип процессора: Core i3
+                Сокет: LGA1700
+                Базовая частота процессора: 3400.0 МГц
+                Максимальная частота процессора: 4500.0 МГц
+                Тип поставки: BOX
+                Количество ядер: 4</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+
+        <article>
+            <img src="processor7.png" width="310" height="300" alt="Процессор">
+            <h2>Процессор Intel Core i5 12400F</h2>
+            <p>Цена: 70 600 тг</p>
+            <p class="car-description">
+                Тип процессора: Core i5
+                Сокет: LGA1700
+                Базовая частота процессора: 2500.0 МГц
+                Максимальная частота процессора: 4400.0 МГц
+                Тип поставки: OEM
+                Количество ядер: 6</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+
+        <article>
+            <img src="processor8.png" width="310" height="300" alt="Процессор">
+            <h2>Процессор AMD Ryzen 9 7950X</h2>
+            <p>Цена: 285 061 тг</p>
+            <p class="car-description">
+                Тип процессора: Ryzen 9
+                Сокет: AM5
+                Базовая частота процессора: 4500.0 МГц
+                Максимальная частота процессора: 5700.0 МГц
+                Тип поставки: OEM
+                Количество ядер: 16</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        
+        <article>
+            <img src="processor9.png" width="310" height="300" alt="Процессор">
+            <h2>Процессор AIntel Core i3-9300</h2>
+            <p>Цена: 71 061 тг</p>
+            <p class="car-description">
+                Тип процессора: Core i3
+                Сокет: LGA1151
+                Базовая частота процессора: 3700.0 МГц
+                Максимальная частота процессора: 4300.0 МГц
+                Тип поставки: BOX
+                Количество ядер: 4</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+
+
+    </div>
+</section>
+
+<section id="videoCards" class="tabcontent" style="display: none;">
+    <div id="catalog">
+        <article>
+            <img src="video0.png" width="310" height="300" alt="Видеокарты">
+            <h2>Видеокарта GIGABYTE GeForce RTX 4070 WINDFORCE OC GV-N4070WF3OC-12GD 12 ГБ</h2>
+            <p>Цена: 368 820 тг</p>
+            <p class="car-description">
+                Серия: GeForce RTX 40 Series
+                Частота графического процессора: 2490 МГц
+                Объем видеопамяти: 12.0 Гб
+                Тип видеопамяти: GDDR6X
+                Длина видеокарты: 261.0 мм
+                Рекомендуемая мощность блока питания: 650.0 Вт</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+
+        <article>
+            <img src="video1.png" width="310" height="300" alt="Видеокарты">
+            <h2>Видеокарта Colorful GeForce RTX 2060 SUPER NB 8G-V 8 ГБ</h2>
+            <p>Цена: 169 999 тг</p>
+            <p class="car-description">
+                Серия: GeForce RTX 20 Series
+                Частота графического процессора: 1470 МГц - базовая, 1650 МГц - разогнанная
+                Объем видеопамяти: 8.0 Гб
+                Тип видеопамяти: GDDR6
+                Длина видеокарты: 222.0 мм
+                Рекомендуемая мощность блока питания: 550.0 Вт</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+
+        <article>
+            <img src="video2.png" width="310" height="300" alt="Видеокарты">
+            <h2>Видеокарта GIGABYTE GeForce GTX 1660 Super OC GV-N166SOC-6GD 6Gb</h2>
+            <p>Цена: 154 999 тг</p>
+            <p class="car-description">
+                Серия: GeForce 16 Series
+                Частота графического процессора: 1830 МГц
+                Объем видеопамяти: 6.0 Гб
+                Тип видеопамяти: GDDR6
+                Рекомендуемая мощность блока питания: 450.0 Вт</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+
+        <article>
+            <img src="video3.png" width="310" height="300" alt="Видеокарты">
+            <h2>Видеокарта GIGABYTE GeForce RTX 4080 GAMING OC GV-N4080GAMING OC-16GD 16 ГБ</h2>
+            <p>Цена: 828 470 тг</p>
+            <p class="car-description">
+                Серия: GeForce RTX 40 Series
+                Частота графического процессора: 2535 МГц
+                Объем видеопамяти: 16.0 Гб
+                Тип видеопамяти: GDDR6X
+                Длина видеокарты: 342.0 мм
+                Рекомендуемая мощность блока питания: 850.0 Вт</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="video4.png" width="310" height="300" alt="Видеокарты">
+            <h2>Видеокарта Palit GeForce RTX 4060 Ti JetStream OC NE6406TU19T1-1061J 16 Гб</h2>
+            <p>Цена: 292 470 тг</p>
+            <p class="car-description">
+                Серия: GeForce RTX 40 Series
+                Объем видеопамяти: 16.0 Гб
+                Тип видеопамяти: GDDR6
+                Рекомендуемая мощность блока питания: 650.0 Вт</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+    
+        <article>
+            <img src="video5.png" width="310" height="300" alt="Видеокарты">
+            <h2>Видеокарта ASUS Dual GeForce RTX 4070 OC 12 Гб</h2>
+            <p>Цена: 381 120 тг</p>
+            <p class="car-description">
+                Серия: GeForce RTX 40 Series
+                Объем видеопамяти: 12.0 Гб
+                Тип видеопамяти: GDDR6X
+                Длина видеокарты: 267.01 мм
+                Рекомендуемая мощность блока питания: 650.0 Вт</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="video6.png" width="310" height="300" alt="Видеокарты">
+            <h2>Видеокарта ASUS Phoenix GeForce RTX 3050 PH-RTX3050-8G 8 ГБ</h2>
+            <p>Цена: 132 708 тг</p>
+            <p class="car-description">
+                Серия: GeForce RTX 30 Series
+                Частота графического процессора: 1807 МГц
+                Объем видеопамяти: 8.0 Гб
+                Тип видеопамяти: GDDR6
+                Длина видеокарты: 177.0 мм
+                Рекомендуемая мощность блока питания: 550.0 Вт</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="video7.png" width="310" height="300" alt="Видеокарты">
+            <h2>Видеокарта GIGABYTE GeForce RTX 3060 GAMING OC 12GB</h2>
+            <p>Цена: 193 687 тг</p>
+            <p class="car-description">
+                Серия: GeForce RTX 30 Series
+                Частота графического процессора: 1837 МГц
+                Объем видеопамяти: 12.0 Гб
+                Тип видеопамяти: GDDR6
+                Длина видеокарты: 282.0 мм
+                Рекомендуемая мощность блока питания: 550.0 Вт</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="video8.png" width="310" height="300" alt="Видеокарты">
+            <h2>Видеокарта GIGABYTE GeForce RTX 3050 EAGLE GV-N3050EAGLE-8GD 8 ГБ</h2>
+            <p>Цена: 150 634 тг</p>
+            <p class="car-description">
+                Серия: GeForce RTX 30 Series
+                Частота графического процессора: 1777 МГц
+                Объем видеопамяти: 8.0 Гб
+                Тип видеопамяти: GDDR6
+                Длина видеокарты: 213.0 мм
+                Рекомендуемая мощность блока питания: 480.0 Вт</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="video9.png" width="310" height="300" alt="Видеокарты">
+            <h2>Видеокарта MSI GeForce RTX 4090 GAMING X TRIO 24 ГБ</h2>
+            <p>Цена: 1 218 550 тг</p>
+            <p class="car-description">
+                Серия: GeForce RTX 40 Series
+                Частота графического процессора: Extreme Performance: 2610 MHz (MSI Center) Boost: 2595 MHz (GAMING & SILENT Mode)
+                Объем видеопамяти: 24.0 Гб
+                Тип видеопамяти: GDDR6X
+                Рекомендуемая мощность блока питания: 850.0 Вт</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+    </div>
+</section>
+
+<section id="memory" class="tabcontent" style="display: none;">
+    <div id="catalog">
+        <article>
+            <img src="opera1.png" width="310" height="300" alt="Оперативная память">
+            <h2>Оперативная память Kingston KF432C16BBAK2/16 16 Гб</h2>
+            <p>Цена: 25 200 тг</p>
+            <p class="car-description">
+                Тип памяти: DDR4
+                Форм-фактор: DIMM
+                Количество модулей в комплекте: 2
+                Тактовая частота: 3200 МГц</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="opera2.png" width="310" height="300" alt="Оперативная память">
+            <h2>Оперативная память Kingston KVR24N17S8/8</h2>
+            <p>Цена: 14 000 тг</p>
+            <p class="car-description">
+                Тип памяти: DDR4
+                Форм-фактор: DIMM
+                Количество модулей в комплекте: 1
+                Тактовая частота: 2400 МГц</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="opera3.png" width="310" height="300" alt="Оперативная память">
+            <h2>Оперативная память Kingston Fury Beast RGB KF560C40BBAK2-16 16 Гб</h2>
+            <p>Цена: 49 200 тг</p>
+            <p class="car-description">
+                Тип памяти: DDR5
+                Форм-фактор: DIMM
+                Количество модулей в комплекте: 2
+                Тактовая частота: 6000 МГц</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="opera4.png" width="310" height="300" alt="Оперативная память">
+            <h2>Оперативная память ADATA AX4U36008G17H-DC50R 16 Гб</h2>
+            <p>Цена: 34 990 тг</p>
+            <p class="car-description">
+                Тип памяти: DDR4
+                Форм-фактор: DIMM
+                Количество модулей в комплекте: 2
+                Тактовая частота: 3600 МГц</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="opera5.png" width="310" height="300" alt="Оперативная память">
+            <h2>Оперативная память Kingston Fury Beast KF432C16BB/8 8 Гб</h2>
+            <p>Цена: 11 900 тг</p>
+            <p class="car-description">
+                Тип памяти: DDR4
+                Форм-фактор: DIMM
+                Количество модулей в комплекте: 1
+                Тактовая частота: 3200 МГц</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="opera6.png" width="310" height="300" alt="Оперативная память">
+            <h2>Оперативная память Kingston HyperX Predator RGB HX432C16PB3AK4/128 4x32GB N</h2>
+            <p>Цена: 100 350 тг</p>
+            <p class="car-description">
+                Тип памяти: DDR4
+                Форм-фактор: DIMM
+                Количество модулей в комплекте: 4
+                Тактовая частота: 3200 МГц</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="opera7.png" width="310" height="300" alt="Оперативная память">
+            <h2>Оперативная память Team Group Xtreem ARGB TF13D416G3600HC18JDC01 2x8GB</h2>
+            <p>Цена: 56 890 тг</p>
+            <p class="car-description">
+                Тип памяти: DDR4
+                Форм-фактор: DIMM
+                Количество модулей в комплекте: 2
+                Тактовая частота: 3600 МГц</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="opera8.png" width="310" height="300" alt="Оперативная память">
+            <h2>Оперативная память Kingston Fury Beast KF432C16BB/8 8 Гб</h2>
+            <p>Цена: 15 900 тг</p>
+            <p class="car-description">
+                Тип памяти: DDR4
+                Форм-фактор: DIMM
+                Количество модулей в комплекте: 1
+                Тактовая частота: 3200 МГц</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="opera9.png" width="310" height="300" alt="Оперативная память">
+            <h2>Оперативная память G.SKILL Ripjaws F4-3200C22S-16GRS 16GB</h2>
+            <p>Цена: 18 981 тг</p>
+            <p class="car-description">
+                Тип памяти: DDR4
+                Форм-фактор: SODIMM
+                Количество модулей в комплекте: 1
+                Тактовая частота: 3200 МГц</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+        <article>
+            <img src="opera10.png" width="310" height="300" alt="Оперативная память">
+            <h2>Оперативная память Team Group, T-Force Delta RGB 96 GB Kit</h2>
+            <p>Цена: 339 990 тг</p>
+            <p class="car-description">
+                Тип памяти: DDR5
+                Форм-фактор: DIMM
+                Количество модулей в комплекте: 2
+                Тактовая частота: 6800 МГц</p>
+            <p class="show-description" onclick="toggleDescription(this)">Характеристики</p>
+        </article>
+        <script>
+            function toggleDescription(element) {
+                var description = element.parentNode.querySelector('.car-description');
+                if (description.style.display === 'none' || description.style.display === '') {
+                    description.style.display = 'block';
+                    element.innerText = 'Скрыть';
+                } else {
+                    description.style.display = 'none';
+                    element.innerText = 'Характеристики';
+                }
+            }
+        </script>
+    </div>
+</section>
+
+
+
+<script>
+
+    function openTab(tabName) {
+        var i;
+        var tabs = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabs.length; i++) {
+            tabs[i].style.display = "none";
+        }
+        document.getElementById(tabName).style.display = "block";
+    }
+    openTab('processors');
+</script>
+
+</body>
+</html>
